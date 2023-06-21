@@ -1,5 +1,7 @@
 package com.company;
 
+// Java is an object-oriented programming language, but it's not completely object-oriented.
+
 // 1. Array is a linear data structure --> It stores multiple values in one single variable.
 // 2. Array uses indexing for accessing the values, indexing starts from 0.
 // 3. Array stores multiple values in a contiguous manner.
@@ -98,7 +100,10 @@ public class June7_Arrays {
 
         // Codes written after return will not run.
         // Even it will start giving an error.
-        //Wrapper Class --> Class derivative for primitive datatype.
+
+        // Wrapper Classes --> Class derivative for primitive datatype.
         // Integer newInt = new Integer(10);
+        // int -> Integer
+        // Every primitive datatype have a class derivative.
     }
 }
