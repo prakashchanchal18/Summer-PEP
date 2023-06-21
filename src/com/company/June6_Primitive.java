@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Primitive_6June {
+public class June6_Primitive {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
