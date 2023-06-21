@@ -15,10 +15,12 @@ class Main {
         // 5. How to take user custom input.
         // 5.1 There are two inbuilt class 1. Scanner or 2. Buffer Reader
         // 5.1.1 First import class like (import java.util.Scanner;) ()
-        // 5.1.2 Create an object of the Scanner class. // Scanner sc = new Scanner(System.in);
+        // 5.1.2 Create an object of the Scanner class.
+        // Scanner sc = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
 
         // 6. Packages --> It's basically a folder. --> Only contain collection of Java classes.
+        //                 Ex: - java.util is a package which contains Scanner class.
         // 6.1 reverse the domain name. E.g. - google.com is domain name then name your package as com.google
         // 6.2 Declares package name on the top of java file.
         // 6.3 Here java.util is the package which contains the classes like Scanner, Math etc.
@@ -35,6 +37,10 @@ class Main {
         // 7.1 Character input in java.
         // 7.2 We take a new String as an input but restrict it to single alphabet.
         char a = sc.next().charAt(0);
+
+        // Character support ASCII Values.
+        char ch = 71;
+        System.out.println(ch);
 
         // 7.3 String input in java.
         // 7.4 String is Non-Primitive data type.
