@@ -37,6 +37,7 @@ class Main {
         // 7.1 Character input in java.
         // 7.2 We take a new String as an input but restrict it to single alphabet.
         char a = sc.next().charAt(0);
+        System.out.println(a);
 
         // Character support ASCII Values.
         char ch = 71;
@@ -48,5 +49,7 @@ class Main {
         // 7.6. There are two ways to take String input
         String str1 = sc.next();
         String str2 = sc.nextLine();
+        System.out.println(str1);
+        System.out.println(str1+str2);
     }
 }
