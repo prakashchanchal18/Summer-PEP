@@ -31,16 +31,16 @@ class Student {
         System.out.println("Hello... My age is " + age);
     }
 }
-public class OOPS_Properties {
+public class June9_OOPS_Properties {
     public static void main(String[] args) {
         Student studentOne = new Student("Vivek Kumar", 12018946,21, "PEP_2024" );
-        // 1. Encapsulation :- A way of binding data members and member functions into a single unit called class.
-        // 2. Abstraction :- Hiding the implementation details from the user which is of no use to the user.
-        //                   So, we prevent this using access modifiers.
-        //                   1. public 2. private 3. protected
+        // 1. Encapsulation: - A way of binding data members and member functions into a single unit called class.
+        // 2. Abstraction: - Hiding the implementation details from the user which is of no use to the user.
+        //                   So, we prevent this from using access modifiers.
+        //                   1. Public 2. Private 3. protected
         // 3. Polymorphism :- Poly(Many) + Morph(Forms) --> A function constructed in many forms.
-        // Research work — Find the difference between runtime and compiler time polymorphism.
-        // 4. Inheritance :- 1. Abstract classes  2. Interface
+        // Research works — Find the difference between runtime and compiler time polymorphism.
+        // 4. Inheritance :- 1. Abstract classes 2. Interface
         studentOne.display();
 //  studentOne.name = "Something else ....";
 //  studentOne.display();

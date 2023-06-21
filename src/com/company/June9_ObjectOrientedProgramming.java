@@ -4,17 +4,16 @@ package com.company;
 // Class :- A template, which helps you create real life entity.
 //          Class contain two things --> 1. Data Members(Properties) 2. Member Functions(Methods)
 // Objects :- The real-life entity created from the class is called object.
-//
 
 class Animal {
-    // 1. Data Members :- Primitive or Non-Primitive data used for building object.
+    // 1. Data Members :- Primitive or Non-Primitive data used for a building object.
     String name;
     int no_of_legs;
     boolean isCarnivorous;
     boolean canPet;
     String color;
 
-    // Member functions :- Functions or Methods which help you create a default function available for
+    // Member functions: - Functions or Methods which help you create a default function available for
     //                     all object created from the objects.
     // Syntax :-
     public void display() {
@@ -36,11 +35,11 @@ class Animal {
     }
 }
 
-public class ObjectOrientedProgramming {
+public class June9_ObjectOrientedProgramming {
     public static void main(String[] args) {
         // Object :- Real life entity.
         // Syntax :- ClassName objectName = new Constructor();
-        // Constructor have same name as class name.
+        // Constructor has same name as class name.
         Animal dog = new Animal(4, true, "Jack", true, "black");
 /*
         dog.display();  Default values :- int - 0, String - null, float/double - 0.0, boolean - false.
