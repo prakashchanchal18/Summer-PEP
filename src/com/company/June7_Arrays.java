@@ -2,12 +2,12 @@ package com.company;
 
 // 1. Array is a linear data structure --> It stores multiple values in one single variable.
 // 2. Array uses indexing for accessing the values, indexing starts from 0.
-// 3. Array stores multiple values in contiguous fashion.
-// 4. Array only and only contain value of same datatype.
+// 3. Array stores multiple values in a contiguous manner.
+// 4. Array only and only contains the value of the same datatype.
 
 import java.util.Scanner;
 
-public class Array {
+public class June7_Arrays {
     public static void main(String[] args) {
 
         // 1. Syntax(java) dataType[] variableName = {val1, val2, val3, ...};
@@ -38,20 +38,20 @@ public class Array {
         // Declare an array.
         int[] array = new int[size];
 
-        // Take input in array.
+        // Take input in an array.
         for(int i = 0; i < size; i++) {
             array[i] = sc.nextInt();
         }
 
         // Size variations
-        // char = 1 byte
-        // byte = 2 bytes
+        // char = 1 bytes
+        //  byte = 2 bytes
         // short = 2 bytes
         // int = 4 bytes
         // float = 4 bytes
         // double = 8 bytes
-        // long = 8 bytes
-        // boolean = 1 byte1
+        // long = 8-bytes
+        // boolean = 1 byte
 
         // Displaying the output;
         System.out.println(array);      // Reference variable --> Return address of the first element of the array.
@@ -75,14 +75,14 @@ public class Array {
         // .
         // .
 
-        // Taking no. of rows
+        // Taking no. Of rows
         int rows = sc.nextInt();
-        // Taking no. of column
+        // Taking no. Of column
         int column = sc.nextInt();
         // Declaring the 2D Array
         int[][] matrix = new int[rows][column];
 
-        // Taking input in the AD Array
+        // Taking input in a 2D Array
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < column; j++) {
                 matrix[i][j] = sc.nextInt();
@@ -96,6 +96,8 @@ public class Array {
             }
         }
 
+        // Codes written after return will not run.
+        // Even it will start giving an error.
         //Wrapper Class --> Class derivative for primitive datatype.
         // Integer newInt = new Integer(10);
     }

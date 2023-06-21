@@ -20,10 +20,11 @@ class Main {
         Scanner sc = new Scanner(System.in);
 
         // 6. Packages --> It's basically a folder. --> Only contain collection of Java classes.
-        //                 Ex: - java.util is a package which contains Scanner class.
+        //                  Ex: - java.util is a package which contains Scanner class.
         // 6.1 reverse the domain name. E.g. - google.com is domain name then name your package as com.google
         // 6.2 Declares package name on the top of java file.
-        // 6.3 Here java.util is the package which contains the classes like Scanner, Math etc.
+        // 6.3 Here java.util is the package, which contains the classes like Scanner, Math, etc.
+
         // *Imp(Interview Question) -->
         // There exist a default package which automatically gets imported in a java file --> java.lang (java.language).
         // Every default keyword is available in java.lang package like System.out, int, Char, Boolean etc.
