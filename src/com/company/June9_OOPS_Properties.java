@@ -13,7 +13,7 @@ class Student {
         this.batch = batch;
     }
 
-    // Getters and setters --> They give you access to read and write Data members, NOT DIRECTLY ..
+    // Getters and setters --> They give you access to read and write Data members, NOT DIRECTLY ...
     public String getName() {
         return this.name;
     }
