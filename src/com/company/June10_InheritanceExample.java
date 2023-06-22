@@ -7,7 +7,9 @@ package com.company;
 
 class A {
     int prop1; String prop2;
-    A() { }
+    A() {
+
+    }
     public A(int prop1, String prop2) {
         this.prop1 = prop1;
         this.prop2 = prop2;
@@ -20,13 +22,14 @@ interface B {
     double prop3 = 3.14; boolean prop4 = false;
     public void display();
 }
-class C extends A implements B {}         // MULTIPLE INHERITANCE -> A case where one child tries to inherit the properties of 2 or more than 2 classes.
+class C extends A implements B {}
+// MULTIPLE INHERITANCE -> A case where one child tries to inherit the properties of 2 or more than 2 classes.
 // SOLUTIONS FOR MULTIPLE INHERITANCE...
 
 public class June10_InheritanceExample {
     public static void main(String[] args) {
-        //        B childObject = new B(3.14, true);
-        //        childObject.display();
+        // B childObject = new B(3.14, true);
+        // childObject.display();
         C objC = new C();
         objC.display();                 // ???
     }
