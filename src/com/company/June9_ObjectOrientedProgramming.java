@@ -1,12 +1,15 @@
 package com.company;
 
+// Functional or Procedural programming. Ex:- C, C++, ... (Non Object Oriented Programming)
+
+// OOP --> Object Oriented Programming
 // OOP --> Deals with classes and objects.
 // Class :- A template, which helps you create real life entity.
 //          Class contain two things --> 1. Data Members(Properties) 2. Member Functions(Methods)
-// Objects :- The real-life entity created from the class is called object.
+// Objects :- The real-life entity created from the class is called object. Used for reference variable.
 
 class Animal {
-    // 1. Data Members :- Primitive or Non-Primitive data used for a building object.
+    // 1. Data Members :- Primitive or Non-Primitive data used for building an object.
     String name;
     int no_of_legs;
     boolean isCarnivorous;
@@ -39,7 +42,7 @@ public class June9_ObjectOrientedProgramming {
     public static void main(String[] args) {
         // Object :- Real life entity.
         // Syntax :- ClassName objectName = new Constructor();
-        // Constructor has same name as class name.
+        // In java Constructor has the same name as class name.
         Animal dog = new Animal(4, true, "Jack", true, "black");
 /*
         dog.display();  Default values :- int - 0, String - null, float/double - 0.0, boolean - false.
@@ -48,8 +51,9 @@ public class June9_ObjectOrientedProgramming {
         dog.isCarnivorous = true;
         dog.canPet = true;
         dog.color = "black";
-*/
 
+
+*/
         System.out.println("Hey, My name is " + dog.name + ". My color is " + dog.color + ".");
         dog.display();
     }

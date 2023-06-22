@@ -1,6 +1,6 @@
 package com.company;
 
-public class InheritanceExample {
+public class June10_InheritanceExample {
     // class
     public static void main(String[] args) {
 
