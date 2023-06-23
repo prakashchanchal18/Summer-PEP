@@ -1,6 +1,6 @@
 package com.company;
 
-public class June21_22_BinarySearchTree {
+public class June21_22_23_BinarySearchTree {
     // Binary Search Tree
     // Running time complexity of insertion and searching is -- O(log N base 2)
 
@@ -13,7 +13,7 @@ public class June21_22_BinarySearchTree {
     //  3. Read the remaining data, all the data lesser than the root/parent will be placed to the left else to the right.
 
     Node root;
-    June21_22_BinarySearchTree() {
+    June21_22_23_BinarySearchTree() {
         this.root = null;
     }
     private static class Node {
@@ -53,6 +53,14 @@ public class June21_22_BinarySearchTree {
             return true;
         }
     }
+
+    public void delete(int key) {
+        root = deleteKey(root, key);
+    }
+
+    public int height() {
+        return getHeight(root);
+    }
     // Insertion in BST
     private Node insertData(Node root, int data) {
         // 1. Tree is not available.
@@ -86,10 +94,67 @@ public class June21_22_BinarySearchTree {
         return root;
     }
 
+    // NOTE:- In LL, Stack, Queue, Tree we first find the element then delete it.
     // Deletion in BST
-    // case 1: Delete a Leaf Node.
-    // Case 2: Delete a node with one child.
-    // Case 3:
+    // case 1: Delete a Leaf Node. My BST will still be a BST.
+    // Case 2: Delete a node with one child (could be a left child or right child).
+    //         My best will get disturbed we have to rearrange. We have to find and replace the successor with child.
+    //         We are trying to find an element where (Node.left == null || Node.right == null).
+    //         If (Node.right == null) replace (Node = Node.left)
+    //         If (Node.left == null) replace (Node = Node.right)
+    // Case 3: Delete a node with two children.
+    //         Replace with the successor which is greatest from the left or smallest from the right.
+    private int findMin(Node root) {
+        int minVal = root.data;
+        while(root.left != null) {
+            root = root.left;
+        }
+        return minVal;
+    }
+    public Node deleteKey(Node root, int key) {
+        // Step 1 - Search for the element to be deleted.
+        if(root == null) {
+            return null;
+        }
+        else {
+            if(key < root.data) {
+                root.left = deleteKey(root.left, key);
+            } else if (key > root.data) {
+                root.right = deleteKey(root.right, key);
+            }
+            else {
+                // Case 2: Delete a node with one child (could be a left child or right child).
+                // Case 1: Delete a Leaf Node. My BST will still be a BST.
+                if(root.left == null) {
+                    return root.right;
+                }
+                else if(root.right == null) {
+                    return root.left;
+                }
+                // Case 3: Delete a node with two children.
+                else {
+                    root.data = findMin(root.right);
+                    // root.data = findMax(root.left);
+                    root.right = deleteKey(root.right, root.data);
+                    // root.left = deleteKey(root.left, root.data);
+                }
+            }
+        }
+        return root;
+    }
+
+    // Find height of BST.
+    private int getHeight(Node root) {
+        // the height of empty tree will be -1.
+        if (root == null) {
+            return -1;
+        }
+        else {
+            int lHeight = getHeight(root.left);
+            int rHeight = getHeight(root.right);
+            return Math.max(lHeight,rHeight) + 1;
+        }
+    }
 
     // Trees Order
     //  1. Inorder:- (LDR) -- 1, 5, 9, 12, 23, 53, 55, 98, 99, 100
@@ -120,7 +185,7 @@ public class June21_22_BinarySearchTree {
         }
     }
     public static void main(String[] args) {
-        June21_22_BinarySearchTree bst = new June21_22_BinarySearchTree();
+        June21_22_23_BinarySearchTree bst = new June21_22_23_BinarySearchTree();
         bst.insert(23);
         bst.insert(12);
         bst.insert(9);
@@ -135,7 +200,14 @@ public class June21_22_BinarySearchTree {
         bst.preOrder();
         bst.postOrder();
         System.out.println(bst.search(100));
-        System.out.print(bst.search(777));
+        System.out.println(bst.search(777));
+        bst.delete(5);
+        bst.inOrder();
+        bst.delete(100);
+        bst.inOrder();
+        bst.delete(626);
+        bst.inOrder();
+        System.out.println(bst.height());
     }
 }
 

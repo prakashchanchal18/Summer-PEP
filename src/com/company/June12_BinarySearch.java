@@ -1,21 +1,29 @@
-package com.company;// In Binary Search we will be given the set of data in a standard approach, and it will be sorted (asc/ des).
+package com.company;
+// Linear Search is applied where we don't know which element is placed where.
+// In Binary Search, we will be given the set of data in a standard approach, and it will be sorted (asc/ des).
+// NOTE:- In binary search data is sorted.
 // Data is sorted so that we will have an idea of which element lies where.
 
-// For Binary Search break the array in two section, search the mid-point.
+// For Binary Search break the array in two sections, search the mid-point.
 // mid-point == median of data ((starting index) + (last index))/2
-// Compare the element from this middle element whether it lies in LA(Left Array) or RA(Right Array)
-// Running time complexity for Binary Search is O(logN).
-// Worst case in binary search is :-
-//                  1. Element not found
+// Compare the element from this middle element whether it lies in LA (Left Array) or RA (Right Array)
+
+// Running time complexity for Linear Search is -- O (N).
+// The worst case in linear search is: -
+//                  1. Element didn't find
+//                  2. Element at last index.
+
+// Running time complexity for Binary Search is -- O (logN).
+// The worst case in binary search is: -
+//                  1. Element didn't find
 //                  2. Element at first index.
-// Note :- Last element can be also a worst case but it depends on number of element whether it's even or odd.
+// Note: - Last element can be also the worst case, but it depends on the number of elements whether it's even or odd.
 
 // If data is not sorted use Arrays.sort(arr);
 
 import java.util.Arrays;
 import java.util.Scanner;
-
-public class BinarySearch {
+public class June12_BinarySearch {
 
     public static int binarySearch(int n, int[] arr, int k) {
         Arrays.sort(arr);

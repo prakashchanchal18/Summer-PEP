@@ -1,9 +1,9 @@
-package com.company;/* Data Structure :-
+package com.company;/* Data Structure: -
   1. Linear Data Structure :- Array, Stack, Queue, LinkedList ....
   2. Non-Linear Data Structure :- Tree, Heaps, Graphs ....
  */
 
-/* Linked List :-
+/* Linked List: -
     1. It is a linear data structure, where we create nodes.
     2. Every node have 2 parts (i. Data, ii. Address of next data).
     3. Every linked list start with a reference called head.
