@@ -1,6 +1,11 @@
 package com.company;
 
 // Java is an object-oriented programming language, but it's not completely object-oriented.
+// The Reason is the primitive data type.
+
+// Python is also completely object-oriented.
+// JavaScript is completely object-oriented.
+// As it does not involve the concept of primitive data types and everything is treated as an object.
 
 // 1. Array is a linear data structure --> It stores multiple values in one single variable.
 // 2. Array uses indexing for accessing the values, indexing starts from 0.
@@ -8,17 +13,19 @@ package com.company;
 // 4. Array only and only contains the value of the same datatype.
 
 import java.util.Scanner;
-
 public class June7_Arrays {
     public static void main(String[] args) {
 
         // 1. Syntax(java) dataType[] variableName = {val1, val2, val3, ...};
         char[] myName1 = {'P', 'R', 'A', 'K', 'A', 'S', 'H'};
+        System.out.println(myName1[5]);
 
         // 2. Syntax(C) dataType variableName[] = {val1, val2, val3, ...}; This is also correct, but it will flash
         //              warning as C type array declaration.
-        char myName2[] = {'P', 'R', 'A', 'K', 'A', 'S', 'H'};
+        // char firstName[] = {'P', 'R', 'A', 'K', 'A', 'S', 'H'};
+        // System.out.println(firstName[3]);
 
+        // Creating a user-driven array, the size of the array will be coming from the user.
         // Syntax(java) : dataType[] variableName = new dataType[size];
         char[] myName3 = new char[7];
         myName3[0] = 'P';
@@ -29,6 +36,13 @@ public class June7_Arrays {
         myName3[5] = 's';
         myName3[6] = 'h';
         // myName3[7] = 'a';  Array index is out of bounds.
+        System.out.println(myName3[0]);
+        System.out.println(myName3[1]);
+        System.out.println(myName3[2]);
+        System.out.println(myName3[3]);
+        System.out.println(myName3[4]);
+        System.out.println(myName3[5]);
+        System.out.println(myName3[6]);
 
         // Scanner --> 2 delimiters --> enter, space
         // This means you can take input either in one line with a (space) or by changing line(enter).
@@ -47,7 +61,7 @@ public class June7_Arrays {
 
         // Size variations
         // char = 1 bytes
-        //  byte = 2 bytes
+        // byte = 2 bytes
         // short = 2 bytes
         // int = 4 bytes
         // float = 4 bytes
@@ -56,7 +70,7 @@ public class June7_Arrays {
         // boolean = 1 byte
 
         // Displaying the output;
-        System.out.println(array);      // Reference variable --> Return address of the first element of the array.
+        // System.out.println(array);      // Reference variable --> Return address of the first element of the array.
         // array : 100, 200, 300, 400, 500
         //       : #10  #14  #18  #22  #26
 
@@ -100,10 +114,14 @@ public class June7_Arrays {
 
         // Codes written after return will not run.
         // Even it will start giving an error.
+        // Error will be - line no 222 unreachable.
 
+        // Wrapper class was introduced to improve the object-oriented quality of java programming language.
         // Wrapper Classes --> Class derivative for primitive datatype.
-        // Integer newInt = new Integer(10);
+
         // int -> Integer
-        // Every primitive datatype have a class derivative.
+        // Integer newInt = new Integer(10);
+
+        // Every primitive datatype has a class derivative.
     }
 }
