@@ -1,6 +1,6 @@
 package com.company;
 // Linear Search is applied where we don't know which element is placed where.
-// In Binary Search, we will be given the set of data in a standard approach, and it will be sorted (asc/ des).
+// In Binary Search, we will be given the set of data in a standard approach, and it will be sorted (asc/des).
 // NOTE:- In binary search data is sorted.
 // Data is sorted so that we will have an idea of which element lies where.
 
@@ -20,6 +20,8 @@ package com.company;
 // Note: - Last element can be also the worst case, but it depends on the number of elements whether it's even or odd.
 
 // If data is not sorted use Arrays.sort(arr);
+
+// Running time complexity comparison -- O(log n) < O(n) < O(n log n)
 
 import java.util.Arrays;
 import java.util.Scanner;

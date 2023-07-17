@@ -3,6 +3,9 @@ package com.company;
 import java.util.Scanner;
 public class June10_LinearSearch {
 
+    // Linear Search Time Complexity
+    // --> Best Case - O(1) -- Element found at first index.
+    // --> Worst Case - O(n) -- Element found at last index or data wasn't found.
     public static int standard_linear_Search(int n, int[] arr, int element) {
         // Traverse the entire array.
         for(int i = 0; i < n; i++) {

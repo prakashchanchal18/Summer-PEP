@@ -111,6 +111,13 @@ public class June21_22_23_BinarySearchTree {
         }
         return minVal;
     }
+    private int findMax(Node root) {
+        int maxVal = root.data;
+        while(root.right != null) {
+            root = root.right;
+        }
+        return maxVal;
+    }
     public Node deleteKey(Node root, int key) {
         // Step 1 - Search for the element to be deleted.
         if(root == null) {
@@ -133,7 +140,9 @@ public class June21_22_23_BinarySearchTree {
                 }
                 // Case 3: Delete a node with two children.
                 else {
+
                     root.data = findMin(root.right);
+                    // way 1 - To find Maximum of from the left
                     // root.data = findMax(root.left);
                     root.right = deleteKey(root.right, root.data);
                     // root.left = deleteKey(root.left, root.data);
@@ -155,6 +164,8 @@ public class June21_22_23_BinarySearchTree {
             return Math.max(lHeight,rHeight) + 1;
         }
     }
+    // Create a descending order traversal which prints the BST in descending order.
+    
 
     // Trees Order
     //  1. Inorder:- (LDR) -- 1, 5, 9, 12, 23, 53, 55, 98, 99, 100
